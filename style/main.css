@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+#game {
+  margin: 10px 20px 10px 20px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+#left {
+  flex: 0 0 25%; 
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#right {
+  flex: 0 0 75%; 
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.picture {
+  max-width: 100%;
+  border: solid 5px black;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+#frame {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#sync {
+  position: absolute;
+  left: calc(50% - 40px);
+  bottom: -40px;
+  width: 80px;
+  height: 80px;
+  fill: white; 
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+  transition: transform 1s, background-color .2s ease-in-out;
+}
+
+#sync:hover {
+  transform: rotate(-1turn);
+  background-color: rgba(3, 160, 3, .9);
+}
+
+#ptitle {
+  font: 2em 'Ubuntu Mono', monospace;
+}
+
+#picked {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  border: solid 5px black;
+  font: 2em 'Ubuntu Mono', monospace;
+  letter-spacing: 0.2em;
+}
+
+#word {
+  font: 5em 'Ubuntu Mono', monospace;
+  flex-flow: row wrap;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 5px 0 10px 0;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+#scoreboard {
+  margin-top: 10px;
+  width: 100%
+}
+
+.player {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 70px;
+  margin: 5px;
+}
+
+.name {
+  flex: 0 0 30%; 
+  text-align: left;
+  font: 3em 'Ubuntu Mono', monospace;
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+  border: solid 3px rebeccapurple;
+}
+
+.letter {
+  text-align: center;
+  font: 3em 'Ubuntu Mono', monospace;
+  width: 70px;
+  height: 100%;
+  margin-right: 20px;
+  padding: 10px;
+  outline: none;
+  border: solid 3px rebeccapurple;
+  border-left: none;
+}
+
+.bar {
+  flex: 0 1 50%; 
+  border: solid 2px rebeccapurple;
+  height: 100%;
+}
+
+#score {
+  width: 250px;
+  height: 75px;
+  margin: 20px;
+  border: none;
+  outline: none;
+  font: 3em 'Ubuntu Mono', monospace;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+#score:hover {
+  background-color: rgb(3, 160, 3);
+}
